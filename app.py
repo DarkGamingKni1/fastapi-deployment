@@ -22,6 +22,6 @@ async def sellauth(request: Request):
     resp = {"Headers": request.headers, "Body": request.body()}
     send_webhook_message(
         "https://discord.com/api/webhooks/1418947147046588526/Lxs1FBxpDCiDrSyrszabrxtWTmeawWz9IVQuUdfIvuHN-KU2rAK9z9x4pLj2T-4Tsyqg",
-        f"```json\n{request.body()\n```"
+        f"```json\n{request.body()}\n```"
     )
     return resp
