@@ -1,5 +1,4 @@
 from fastapi import FastAPI, Request, HTTPException, Depends, status
-from disc
 from discord_webhook import DiscordWebhook, DiscordEmbed
 
 app = FastAPI()
