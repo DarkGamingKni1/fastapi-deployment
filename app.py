@@ -20,5 +20,5 @@ def root():
 
 @app.post("/api/sellauth", status_code=status.HTTP_200_OK)
 async def sellauth(request: Request):
-    embed = DiscordEmbed(title="Test", description=f"Headers: {request.headers}\nBody: {request.body()}")
+    resp = {"Headers": request.headers, "Body": request.body()}
     send_webhook_message("https://discord.com/api/webhooks/1418947147046588526/Lxs1FBxpDCiDrSyrszabrxtWTmeawWz9IVQuUdfIvuHN-KU2rAK9z9x4pLj2T-4Tsyqg", "", embed)
